@@ -1,4 +1,3 @@
-
 # Longwave
 
 **A creator operating system for serious long-form video — with a verified path to YouTube.**
