@@ -34,20 +34,43 @@ separately — the server asks with `403` + `WWW-Authenticate: ... error="insuff
 
 ## What you can run
 
+Fifteen tools in three tiers. A fresh connection can read the channel and create clips. Publishing to
+a live channel and changing a published thumbnail are **separate approvals** — the server asks with
+`403` when you reach for one.
+
+**Create and inspect** — granted on first connect
+
 | Tool | Does |
 |---|---|
 | `account_status` | Channel connected? Credits? Call this first. |
-| `create_shorts_job` | Cut a long-form episode into Shorts, or one supercut |
-| `get_job` · `list_clips` | Progress, and what was produced |
-| `publish_shorts` | Publish with scheduling — **the gated permission** |
-| `create_supercut` · `reschedule_post` | Assemble a longer cut; move a queued post |
-| `approve_thumbnail` | Publish a generated thumbnail — **gated** |
-| `list_episodes` · `get_episode` | The creator's long-form catalogue, and one episode in full |
-| `get_insights` · `get_content_intelligence` | What's working, and what to make next |
-| `get_channel_overview` · `list_playlists` · `list_thumbnail_styles` | Connected platforms, playlists, styles |
+| `create_shorts_job` | Cut a long-form episode into Shorts. Free — credits are spent on publish. |
+| `get_job` | Progress, clip count and errors. |
+| `list_clips` | What was produced, with per-platform status and live URLs. |
+| `create_supercut` | Assemble one longer cut from a source video or existing clips. |
+
+**Read** — granted on first connect
+
+| Tool | Does |
+|---|---|
+| `list_episodes` | The creator's long-form catalogue, newest first. |
+| `get_episode` | One episode in full: titles, notes, chapters, transcript, podcast state. |
+| `get_insights` | Channel-level summary: episode counts, topics, hook types. |
+| `get_content_intelligence` | Longwave's written analysis of what to make next. |
+| `get_channel_overview` | Connected platforms and how each is performing. |
+| `list_playlists` | Playlists, and which one is the upload destination. |
+| `list_thumbnail_styles` | The thumbnail style catalogue. |
+
+**Change something public** — a separate approval, every time
+
+| Tool | Does |
+|---|---|
+| `publish_shorts` | Publish Shorts to YouTube, with scheduling. |
+| `reschedule_post` | Move a queued post to a different hour, or unschedule it. |
+| `approve_thumbnail` | Publish an AI-generated thumbnail on the episode. |
 
 Downloading video with `yt-dlp` is never necessary. Driving YouTube Studio is never necessary.
-Longwave publishes through the official API.
+Longwave publishes through the official API. Full schemas come from `tools/list`, which is
+authoritative.
 
 ---
 
@@ -149,11 +172,18 @@ you and stop.
 
 ## The plugin
 
-`Longwave-Media/longwave-grok-plugin` — for Grok Build, Grok Bot, Cursor, Claude Code and Muse.
+[`Longwave-Media/longwave-grok-plugin`](https://github.com/Longwave-Media/longwave-grok-plugin) — for
+Grok Build, Grok Bot, Cursor, Claude Code and Muse.
 
 ```
 grok plugin install Longwave-Media/longwave-grok-plugin
 ```
+
+No review, no API key, nothing to configure. Connect and it opens a browser for the creator to
+approve. The package contains no credentials and no executable code.
+
+[Security policy](https://github.com/Longwave-Media/longwave-grok-plugin/blob/main/SECURITY.md) ·
+[Changelog](https://github.com/Longwave-Media/longwave-grok-plugin/blob/main/CHANGELOG.md)
 
 ## Talk to us
 
