@@ -160,6 +160,8 @@ you and stop.
 
 ## How your data is handled
 
+- **It stays in the United States.** Storage and processing run on US infrastructure — Supabase on
+  AWS `us-west-2`, application compute in `us-east-1`. Pricing is in US dollars.
 - **Your YouTube credentials never leave Longwave's servers.** An agent receives an opaque Longwave
   token, never anything issued by Google.
 - **Scopes are narrow and explicit.** Reading your channel and creating clips is one level.
