@@ -1,3 +1,4 @@
+
 # Longwave
 
 **A creator operating system for serious long-form video — with a verified path to YouTube.**
@@ -109,6 +110,32 @@ factor or a CAPTCHA.
 Native, scheduled publishing through first-party APIs — no browser — for TikTok · Instagram Reels ·
 LinkedIn Video · Bluesky · Threads · X Threads · LinkedIn Article.
 
+## What it costs
+
+**Start free. Creating an account adds 200 credits, no card required, and they do not expire.** That
+is roughly six weeks of publishing at three Shorts a day.
+
+You pay **per Short that actually publishes** — nothing for a failed render, nothing for a clip you
+decide not to post, and nothing to create a job.
+
+| Action | Credits |
+|---|---|
+| Publish a Short | **1** |
+| Publish a Short on autopilot | **1.5** |
+| Publish to X through our shared app quota | **4** |
+| Upload a full long-form episode | **5**, plus **1 per GB** |
+
+Captions are included. Show notes (1.5), extended clip retention (0.5) and transcript export (0.5)
+are optional extras.
+
+**More credits, if you want them:** $10 → 70 · $25 → 185 · $50 → 400 · $100 → 2,500.
+
+**An agent can never spend your money.** It holds no card, cannot top up, and cannot reach a
+checkout. When the balance runs low a tool returns a top-up link; the agent's job is to hand it to
+you and stop.
+
+[Current pricing →](https://www.longwave.media/pricing)
+
 ## How your data is handled
 
 - **Your YouTube credentials never leave Longwave's servers.** An agent receives an opaque Longwave
@@ -116,8 +143,7 @@ LinkedIn Video · Bluesky · Threads · X Threads · LinkedIn Article.
 - **Scopes are narrow and explicit.** Reading your channel and creating clips is one level.
   Publishing to a live channel, and changing a published thumbnail, are separate permissions you
   grant deliberately — because both change something public.
-- **Nothing is charged until a Short actually publishes.** A failed render costs nothing. When the
-  balance runs low the tool returns a top-up link — payment is never handled by the agent.
+- **The agent never touches your money or your credentials** — see *What it costs* above.
 - The plugin package itself collects and stores nothing.
 
 [Terms](https://www.longwave.media/terms) · [Privacy](https://www.longwave.media/privacy)
